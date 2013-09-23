@@ -4,17 +4,16 @@ import java.util.Random;
 
 public class CustomRandomGenerator {
 	
-	public Integer nextRandomNo = 0;
-	Random objRandom = new Random();
+	static Random objRandom = new Random();
 	
 	public CustomRandomGenerator()
 	{
 		
 	}
 	
-	public Integer getRandomNumber()
+	public static Integer getRandomNumber()
 	{
-		return objRandom.nextInt();
+		return objRandom.nextInt(1000);
 	}
 
 }

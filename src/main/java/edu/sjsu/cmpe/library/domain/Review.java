@@ -1,43 +1,54 @@
 package edu.sjsu.cmpe.library.domain;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import edu.sjsu.cmpe.library.util.CustomRandomGenerator;
-@JsonPropertyOrder(alphabetic=false)
+
+
 public class Review {
-    private Integer ID =0;
     
-    private Integer Rating;
-    private String Comment;
+	private Integer id =0;
+    @JsonProperty("rating")
+    Integer rating=0;
     
-    CustomRandomGenerator ReviewId;
+	@JsonProperty("comment")
+    private String comment="";
+    
     
     public Review(){
     	
     }
-    public Review(String comment, Integer rating)
+    
+    /*public Review(String Comment, Integer Rating)
     {
-    	ReviewId = new CustomRandomGenerator();
-    	Comment = comment;
-    	Rating = rating;
-    	ID= ReviewId.getRandomNumber();
-    }
-	public Integer getID() {
-		return ID;
+    	this.Comment = Comment;
+    	this.Rating = Rating;
+    	ID= CustomRandomGenerator.getRandomNumber();
+    }*/
+   
+	public void setid() {
+		if(this.id == 0)
+			this.id = CustomRandomGenerator.getRandomNumber();
 	}
-	public void setID() {
-		ID = ReviewId.getRandomNumber();
+	
+	public void setrating(Integer Rating) {
+	    this.rating = Rating;
 	}
-	public Integer getRating() {
-		return Rating;
+	
+	public Integer getid() {
+		return this.id;
 	}
-	public void setRating(Integer rating) {
-	    Rating = rating;
+	public String getcomment() {
+		return this.comment;
 	}
-	public String getComment() {
-		return Comment;
+	
+	public Integer getrating() {
+		return this.rating;
 	}
-	public void setComment(String comment) {
-		Comment = comment;
+	public void setcomment(String obj) {
+		this.comment = obj;
 	}
 }
