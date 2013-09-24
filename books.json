@@ -1,6 +1,1 @@
-{"isbn":-600452766,
-"title":"RadhaKisna",
-"publication_date":"2/11/2011",
-"language":"engl",
-"number_of_pages":150,
-"status":"available"}
+{"book":{"isbn":427,"title":"EC2","language":"eng","status":"available","review":[],"authors":[{"rel":"view-author","href":"/books/427/authors/637","method":"GET"},{"rel":"view-author","href":"/books/427/authors/905","method":"GET"}],"publication-date":"2/11/2011","num-pages":185},"links":[{"rel":"view-book","href":"/books/427","method":"GET"},{"rel":"update-book","href":"/books/427","method":"PUT"},{"rel":"delete-book","href":"/books/427","method":"DELETE"},{"rel":"create-review","href":"/books/427/reviews","method":"POST"}]}
